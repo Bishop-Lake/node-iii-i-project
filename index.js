@@ -56,13 +56,9 @@ server.post('/api/register', (req, res) => {
       .catch(err => res.send(err));
   });
   
-  server.get('/hash', (req, res) => {
-    const name = req.query.name;
-    const hash = bcrypt.hashSync(name, 8);
-    res.send(`the hash for ${name} is ${hash}`);
-  });
-
 //end endpoints
 
 const port = 8000;
 server.listen(port, () => console.log(`\n*** Magic On Port ${port} ***\n`));
+
+//this new branch is just for a pull
