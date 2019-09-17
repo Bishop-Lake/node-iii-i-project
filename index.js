@@ -78,6 +78,23 @@ server.post('/api/register', (req, res) => {
       })
       .catch(err => res.send(err));
   });
+
+  server.get('/logout', (req, res) => {
+    if (req.session) {
+      req.session.destroy(error => {
+        if (error) {
+          res.status(500).json({message: 'Error whilst logging out',
+          });
+        } else {
+          res.status(200).json({ message: 'You have been logged out' });
+        }
+      });
+    } else {
+      res.status(200).json({ message: 'you have to login before you logout, would you like to do that first? seems a bit superfolous' });
+    }
+  })
+    
+
   
 //end endpoints
 
