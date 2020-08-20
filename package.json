@@ -19,7 +19,7 @@
   },
   "homepage": "https://github.com/Bishop-Lake/node-iii-i-project#readme",
   "dependencies": {
-    "bcrypt": "^3.0.6",
+    "bcrypt": "^5.0.0",
     "express": "^4.17.1",
     "knex": "^0.19.4",
     "sqlite3": "^4.1.0"
